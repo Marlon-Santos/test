@@ -1,120 +1,97 @@
-/*
- * Base structure
- */
-html, body {
-	height: 100%;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 body {
-	padding-top: 56px;
-	padding-left: 0;
-} 
-
-/*
- * main layout
- */
-.layout-main {
-    display: flex;
-    min-height: calc(100vh - 52px);
-    overflow: hidden;
+  width: 100%;
+  height: 100%;
+  color: white;
+  background-color: black;
 }
 
-/*
- * Content
- */
-.layout-content {
-    width: 100%;
-    padding-top: 0px;
+header > div {
+  display: flex;
+  justify-content: center;
 }
 
-.container {
-	width: 100%;
-	padding-top: 20px;
+header > div > input {
+  display: inline-block;
+  width: 70px;
+  height: 40px;
+  margin: 10px;
+  background-color: white;
+  border: none;
+  appearance: none;
+  border-radius: 10px;
+  outline: 0;
 }
 
-/*
- * Sidebar
- */
-.sidebar {
-    width: 0px;
-    height: 100vh;
-    border-top: 1px solid #eee;
-    border-right: 1px solid #eee;    
-    background-color: #f8f9fa;
-    flex-shrink: 0;
-    overflow: hidden;
-    transition: width .5s;
+header > div > input:hover {
+  cursor: pointer;
 }
 
-.sidebar .nav {
-	margin-bottom: 0px;
+article {
+  padding: 50px;
+}
+article > div:first-child {
+  font-size: 30px;
+  text-align: center;
 }
 
-.sidebar .nav-item {
-	width: 100%;
+article > div:last-child {
+  display: flex;
+  margin: 160px auto;
+  width: 300px;
+  height: 300px;
+  border: 50px solid transparent;
+  border-radius: 98%;
+  overflow: hidden;
+  background-image: url("../images/circle.png");
+  background-position: center;
+  background-repeat: no-repeat;
 }
 
-.sidebar .nav-item {
-	margin-left: 0;
+article > div > img {
+  width: 100%;
 }
-
-.sidebar .nav-link {
-	border-radius: 0;
-} 
-
-.sidebar ul li:hover a, .menu ul li.active a{
-    color: #777777;
+footer > div:first-child {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 35%;
+  height: 250px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
-
-.sidebar ul{
-    list-style: none;
-    padding: 10px 0px;
+footer > div:first-child > div {
+  color: black;
 }
-
-.sidebar ul li a{
-    display: block;
-    color:#1a1a1a;
-    padding: 10px 15px;
-    white-space: nowrap;
+footer > div:nth-child(2) {
+  position: fixed;
+  right: 0;
+  top: 0;
+  width: 35%;
+  height: 250px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
-
-.sidebar.sidebar-open {
-    width: 300px;
+footer > div:nth-child(2) > div {
+  color: black;
 }
-
-/*
- * nav-pills home
- */
-.nav-pills .nav-link.active, .nav-pills .show>.nav-link {
-	color: #fff;
-	background-color: #1e94d2;
+footer > div:last-child {
+  position: fixed;
+  right: 0;
+  bottom: 0;
+  width: 100%;
+  height: 250px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
-
-/*
- * toogle do navbar do menu
- */ 
-
-.navbar-toggle {
-    display: inline-block;
-    margin-left: 10px;
-}
-
-/*
- * Footer
- */
-.layout-footer {
-	position: fixed;
-	left: 0;
-	right: 0;
-	bottom: 0;
-	margin: 0;
-	height: 50px;
-	border-top: 1px solid #eeeeee;
-}
-
-.footer-copy {
-	font-size: 92%;
-	display: block;
-	color: #777777;
-	text-align: center;
+footer > div:last-child > div {
+  color: black;
 }
